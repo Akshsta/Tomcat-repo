@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <!-- Dependencies Section -->
     <dependencies>
         <!-- Example dependency -->
         <dependency>
@@ -19,7 +20,7 @@
         </dependency>
     </dependencies>
 
-    <!-- ✅ Add this block to ensure Maven uses HTTPS -->
+    <!-- Repositories Section with HTTPS -->
     <repositories>
         <repository>
             <id>central</id>
@@ -29,5 +30,15 @@
 
     <build>
         <finalName>mywebapp</finalName>
+
+        <!-- Updated maven-war-plugin version -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version> <!-- Newer version to support Java 11+ -->
+            </plugin>
+        </plugins>
     </build>
+
 </project>
