@@ -9,10 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <build>
-        <finalName>mywebapp</finalName>
-    </build>
-
     <dependencies>
         <!-- Example dependency -->
         <dependency>
@@ -22,4 +18,16 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <!-- ✅ Add this block to ensure Maven uses HTTPS -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <finalName>mywebapp</finalName>
+    </build>
 </project>
